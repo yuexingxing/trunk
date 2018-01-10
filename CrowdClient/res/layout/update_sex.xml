@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_pop_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:background="@color/transparent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+             android:background="@drawable/shape_invite_white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                 android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_gender_male"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/shape_invite_white"
+                    android:text="男"
+                    android:textColor="@color/blue_message_bg"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f2f2f2" />
+
+            <LinearLayout
+                                 android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+                
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_gender_female"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/shape_invite_white"
+                    android:text="女"
+                    android:textColor="@color/blue_message_bg"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/transparent" />
+
+        <!--
+             <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+        -->
+
+        <Button
+            android:id="@+id/item_popupwindows_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_invite_white"
+            android:text="取消"
+            android:textColor="@color/blue_message_bg"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

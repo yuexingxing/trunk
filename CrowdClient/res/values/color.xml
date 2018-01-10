@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="floralwhite">#FFFAF0</color>
+    <color name="gray">#D9D9D9</color>
+    <!-- 暗灰色 -->
+    <color name="dimgrey">#696969</color>
+    <!-- new -->
+    <drawable name="click_bg">#f4f4f4</drawable>
+
+    <color name="button_bg">#f4f4f4</color>
+
+    <drawable name="click_default">#ffffff</drawable>
+    <!-- 灰色通用颜色 -->
+    <color name="gray_btn_pressed_false">#c2c2c2</color>
+    <!-- 按钮不可用时的颜色 -->
+    <color name="text_blue1">#2a86d3</color>
+    <!-- 通用蓝色字体 -->
+    <color name="btn_bg_orange">#ff9e40</color>
+    <!-- 橘色按钮的颜色 -->
+    <color name="btn_bg_orange_hover">#F77E42</color>
+    <color name="orange_default">#f7462A</color>
+    <!-- 橘色按钮默认 -->
+    <color name="btn_bg_orange_default">#F6A869</color>
+    <!-- 橘色按钮悬停淡色 -->
+    <color name="btn_bg_orange_dan">#FFE0D9</color>
+    <!-- 红色 -->
+    <color name="red">#f24820</color>
+    <color name="red_share">#f74c5c</color>
+    <color name="btn_bg_red_default">#f75646</color>
+    <color name="btn_bg_red_hover">#E2453D</color>
+    <!-- 错误信息提示 -->
+    <color name="green">#81ba3f</color>
+    <color name="white_touming">#b0ffffff</color>
+    <color name="gray_title_bg_hover">#2B363F</color>
+    <color name="gray_title_bg">#354350</color>
+    <color name="blue_custom_dialog">#33b5e5</color>
+
+    <!-- guid ,splash backgroud -->
+    <color name="guid_1">#009ef9</color>
+    <color name="guid_2">#f39800</color>
+    <color name="guid_3">#8fc31f</color>
+    <color name="guid_4">#ec3b4f</color>
+    <color name="splash_bg">#ff0000</color>
+    <color name="splash_g">#7eb978</color>
+
+    <!-- background gray -->
+    <color name="background_gray">#e9e9e9</color>
+
+    <!-- old -->
+    <color name="touming">#00000000</color>
+    <color name="gray_lucency">#55000000</color>
+    <color name="touming1"> #9F000000</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="item_bg">#f5f5f5</color>
+    <color name="item_bg_hover">#dddddd</color>
+    <color name="findresult_gou_hover">#4bb4fe</color>
+    <color name="findresult_gou">#5d7991</color>
+    <color name="yellow">#eb943f</color>
+    <color name="findresult_tanhao">#ff7100</color>
+    <color name="blue">#ffecdc</color>
+    <color name="bg_blue">#5e9bee</color>
+    <color name="item_hover">#dfdfdf</color>
+    <!-- UI  主题绿色 -->
+    <!-- title绿 -->
+    <color name="title_bg">#0CBAA0</color>
+    <color name="title_bg_hover">#0da088</color>
+    <!-- talk语音泡泡背景颜色 -->
+    <color name="text_green_one">#1FC987</color>
+    <color name="text_green_two">#96C93D</color>
+    <color name="text_green_three">#45C8B4</color>
+    <color name="text_green_four">#0CBAA0</color>
+    <color name="text_green_bg_selectpop">#E2F7F3</color>
+    <!-- 扫描条码按下去效果 -->
+    <color name="text_green_five">#C7F1E1</color>
+    <color name="text_green_six">#2e8b57</color>
+    <color name="text_green_qi">#34AD76</color>
+    <color name="dialog_sure">#DAE5D4</color>
+    <color name="dialog_line">#8FE4C3</color>
+    <color name="title_right_bt">#D5EFEA</color>
+    <color name="title_right_bt_hover">#1E8E78</color>
+    <color name="title_right_tv">#2D6B5F</color>
+    <color name="bt_green_hover">#8EC13E</color>
+    <color name="pop_bg">#E2F7F3</color>
+    <color name="pai_bt">#1FC987</color>
+    <color name="share_callback_red_text">#ec2e22</color>
+    <color name="share_callback_color_btn_default">#f6a869</color>
+    <color name="share_callback_color_btn_press">#f49453</color>
+
+    <!-- 业务界面 -->
+    <!-- gridview中的灰色线条 -->
+    <color name="business_gridview_line">#e5e5e5</color>
+    <color name="business_button_click_hover">#0E9E86</color>
+    <color name="business_gridview_menu_textcolor">#3a3a3a</color>
+    <color name="business_gridview_background">#EEEEEE</color>
+
+    <!-- 主题颜色及通用颜色 -->
+    <color name="theme_content_bg">#f2f2f2</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="cursor">#66a1db</color>
+    <color name="tousu_text_notice">#007dff</color>
+    <color name="message_title_bg">#f0f1f1</color>
+    <color name="message_bg">#45f0f1f1</color>
+    <color name="half_transparent">#e0000000</color>
+    <color name="blue_button_dialog">#c3e8ff</color>
+    <color name="line">#999590</color>
+    <color name="item_rule_bg">#eaeaed</color>
+
+    <!-- UI颜色 -->
+    <color name="shadow">#965e29</color>
+    <color name="shadow_start">#fff0f1f1</color>
+    <color name="shadow_end">#00f0f1f1</color>
+    <color name="slideline">#d0d0d0</color>
+    <color name="slide_bg">#f0f1f1</color>
+    <color name="line_ps">#d8d8d8</color>
+    <color name="dash_line">#cbcbcb</color>
+    <color name="message_line">#ddd</color>
+    <color name="guid_bg">#f5f4f2</color>
+    <color name="list_msg_hover">#e3e3e3</color>
+    <color name="list_order_hover">#F3F3F3</color>
+    <color name="order_list_divider">#d6d6d6</color>
+    <color name="fast_reply_divider">#cfcfcf</color>
+    <color name="green_order_bg">#4ccf6b</color>
+    <color name="green_message_bg">#79e94f</color>
+    <color name="green_message_bg_hover">#3ddf00</color>
+    <color name="blue_message_bg">#0F85EE</color>
+    <color name="blue_message_bg_hover">#0F73EE</color>
+    <color name="blue_message_bg_unable">#CFDCE5</color>
+    <color name="yellow_message_bg">#FF7E00</color>
+    <color name="orange_qrcode_bg">#ff7b65</color>
+    <color name="gray_divider">#c8c7cc</color>
+    <color name="green_line">#1fc987</color>
+    <color name="gray_bg">#AAB0B6</color>
+    <color name="gray_bg_hover">#AAB0B6</color>
+    <color name="button_esc_red">#F75749</color>
+    <color name="button_esc_red_hover">#E23A33</color>
+    <color name="pop_choose">#48CBB7</color>
+    <color name="e3scan_type">#4c3f39</color>
+    <color name="wit_qianbao_hui">#1d1d26</color>
+    <color name="wit_qianbao_hong">#e93948</color>
+    <!-- 免费通知客户竖线的颜色 -->
+    <color name="line_gray">#DBDBDB</color>
+
+    <!-- 字体颜色 -->
+    <color name="text_gray2">#a9a9a9</color>
+    <color name="text_gray3">#666666</color>
+    <color name="text_back">#f2f2f2</color>
+    <color name="text_back_hover">#8d8d8d</color>
+    <color name="text_hint">#989898</color>
+    <color name="text_sender_adress">#999</color>
+    <color name="text_sender_name">#2a86d3</color>
+    <color name="text_sender_phone">#333</color>
+    <color name="text_blue">#3a9af9</color>
+    <color name="text_yellow">#ff9a23</color>
+    <color name="text_time">#7c7c7c</color>
+    <color name="text_express">#90969c</color>
+    <color name="text_express_no">#0078EE</color>
+    <color name="text_order">#F24820</color>
+    <color name="text_pickup">#DBEAFF</color>
+    <color name="text_addprice">#EE4036</color>
+    <color name="text_point">#333333</color>
+    <color name="text_orange">#F5911E</color>
+    <color name="text_item_phone">#888888</color>
+    <!-- 邀请好友 -->
+    <color name="invite_act_bg">#9943474d</color>
+    <color name="alpha_bg">#e2e2db</color>
+    <color name="alpha_text">#9e9e97</color>
+    <color name="invite_bg">#f7f7f2</color>
+    <color name="invite_name">#0a0a0a</color>
+    <color name="invite_phone">#b9b9b5</color>
+    <!-- 超派查询和快递查询 -->
+    <color name="text_yes">#55b301</color>
+    <color name="text_no">#ff6600</color>
+    <color name="text_yes2">#44c110</color>
+    <!-- 审核状态 -->
+    <color name="audit_yes">#5bbc1d</color>
+    <color name="audit_no">#ff5222</color>
+    <color name="auditing">#ff8622</color>
+    <color name="audit_yes_hover">#52a51c</color>
+    <color name="audit_no_hover">#e04622</color>
+    <color name="auditing_hover">#ea7824</color>
+    <!-- 关于 -->
+    <color name="web_text_about">#2a86d3</color>
+    <!-- 我的服务说明界面 -->
+    <color name="my_service_btn_commit">#59d3bc</color>
+
+    <!-- CRM系列 -->
+    <color name="add_cus_bg">#F9F9F2</color>
+    <color name="phone_window_text_color">#0DAB94</color>
+    <color name="add_cus_bg_btn">#1FC987</color>
+
+    <!-- 查快递 -->
+    <color name="findexpress_view_line">#eaeaed</color>
+    <color name="findexpress_view_brown">#f3f2ea</color>
+    <color name="findexpress_view_rule_blue">#006cff</color>
+    <color name="findexpress_view_bg">#e6e6e6</color>
+    <color name="item_rule_blue">#006cff</color>
+    <color name="brown">#f3f2ea</color>
+    <color name="aging_address_bg">#a6a8ab</color>
+    <color name="circle_express_line">#F1F1F1</color>
+
+    <!-- 外块模块 -->
+    <color name="contact_customer_btn_clicked_bg">#2E8B57</color>
+    <!-- 已完成外单子字体颜色 -->
+    <color name="finish_outside_block_status">#60bf67</color>
+    <!-- 抢外单按钮背景点击颜色 -->
+    <color name="outside_detail_rob_red">#f9715f</color>
+    <color name="outside_detail_rob_red_hover">#f44f47</color>
+
+    <!-- green -->
+    <!-- btn_green1 RGB:142:194:31 -->
+    <color name="btn_green1">#8EC21F</color>
+    <!-- btn_green2 RGB:128:183:42 -->
+    <color name="btn_green2">#80b72a</color>
+
+    <!-- gray -->
+    <!-- btn_gray1 RGB:204:204:204 -->
+    <color name="btn_gray1">#CCCCCC</color>
+
+    <!-- 标准颜色 -->
+    <!-- 主体色：用于特别需要强调和突出的文字，icon -->
+    <color name="default_green">#0cbaa0</color>
+    <!-- 深一点的green,用于点击下去效果 -->
+    <color name="default_green_shen">#0E9E86</color>
+    <!-- 辅助色：小面积使用，用于与价格相关文字信息和小部分提交按钮 -->
+    <color name="default_orange">#fe6553</color>
+
+    <!-- 灰色通用 -->
+    <!-- 用于重要级文字信息，内页标题信息RGB:51,51,51 -->
+    <color name="gray_1">#333333</color>
+    <!-- 用于普通级段落信息 RGB：102，102，102 -->
+    <color name="gray_2">#cccccc</color>
+    <!-- 用于辅助、将要的文字信息RGB:152,152,152 -->
+    <color name="gray_3">#989898</color>
+    <!-- 用于分割线，标签描边RGB：204，204，204 -->
+    <color name="gray_4">#999999</color>
+    <!-- 用于内容区域底色RGB：242，242，255 -->
+    <color name="gray_5">#f2f2f2</color>
+    <!-- 横线 -->
+    <color name="gray_6">#e2e2e2</color>
+    <!-- 分割线 -->
+    <color name="gray_line">#dddddd</color>
+    <!-- 背景色 -->
+    <color name="gray_back">#eeeeee</color>
+    <!-- 橙色-辅助色 -->
+    <!-- 小面积使用，用于与价格相关的文字信息和小部分提交按钮RGB:254,101,83 -->
+    <color name="orange_1">#fe6553</color>
+    <color name="translucent">#b0000000</color>
+
+    <!-- 按钮颜色 -->
+    <!-- 橙色-default -->
+    <color name="default_orange_btn">#f99755</color>
+    <!-- 橙色-onTouch -->
+    <color name="default_orange_shen_btn">#ef7f33</color>
+    <color name="skuaidiCommonDiaLogBackGround">#b0000000</color>
+
+    <!-- 主色 红色 -->
+    <color name="main_color">#f7123c</color>
+    <color name="main_color_down">#ea3f00</color>
+    <color name="notice_red">#f8482b</color>
+    <!-- 灰色 -->
+    <!-- 黑色字体 -->
+    <color name="text_black">#222222</color>
+    <color name="text_gray">#999999</color>
+    <color name="text_dark_gray">#6e6e6e</color>
+    <color name="main_bg_color">#eeeeee</color>
+    <color name="main_gray">#c2c2c2</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <!-- 橙色 -->
+    <color name="orange">#ea3f4f</color>
+    <!-- 灰色背景 -->
+    <color name="gray_background">#eeeeee</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="top">#C7C7CD</color>
+    <color name="del">#FC3C39</color>
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+
+    <!-- background -->
+    <color name="bg">#FFF5F5F5</color>
+    <color name="bg_pressed">#FFF2F2F2</color>
+
+    <!-- material design black font color -->
+    <color name="font_black_0">#212121</color>
+    <color name="font_black_1">#424242</color>
+    <color name="font_black_2">#616161</color>
+    <color name="font_black_3">#757575</color>
+    <color name="font_black_4">#9e9e9e</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+
+    <!-- divider -->
+    <color name="divider_1">#e2e2e2</color>
+    <color name="divider_2">#e6e6e6</color>
+    <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="btn_login_normal">#00acff</color>
+    <color name="btn_login_pressed">#46678d</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+    <color name="btn_register_normal">#ffffff</color>
+    <color name="btn_register_pressed">#00acff</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="common_bg">#fcfcfc</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="divider_list">#d4d4d4</color>
+    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_text_color_normal">#ffffff</color>
+    <color name="btn_white_normal">#f7f8f8</color>
+    <color name="btn_white_pressed">#b5b5b6</color>
+    <color name="btn_green_noraml">#68C270</color>
+    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_gray_pressed">#666667</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="orange">#FFA500</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="gray_normal">#666667</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="voip_interface_text_color">#bababa</color>
+    <color name="black_deep">#FF000000</color>
+    <color name="btn_answer_pressed">#4ebcd3</color>
+    <color name="btn_answer_normal">#2dafa3</color>
+    <color name="list_item_secondary_color">#888888</color>
+    <color name="list_item_primary_color">#000</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="topbar_3">#339EFE</color>
+    <color name="line">#dddddd</color>
+    <color name="text_10">#333333</color>
+    <color name="text_11">#999999</color>
+    <color name="gray_bg">#f8f8f8</color>
+    <color name="text_ababab">#ABABAB</color>
+    <color name="color_f7f7f7">#f7f7f7</color>
+    <color name="color_f4f4f4">#f4f4f4</color>
+
+</resources>

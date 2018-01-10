@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="#fff" >
+
+        <TextView
+            android:id="@+id/alipay_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="姓    名"
+            android:textColor="#222222" />
+
+        <EditText
+            android:id="@+id/alipay_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/alipay_tv_name"
+            android:background="@null"
+            android:hint=""
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:background="#EEEEEE" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff" >
+
+        <TextView
+            android:id="@+id/alipay_tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="支付宝"
+            android:textColor="#222222" />
+
+        <EditText
+            android:id="@+id/alipay_et_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/alipay_tv_user"
+            android:background="@null"
+            android:hint="支付宝账户"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/alipay_bt_ok"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/register_valid"
+            android:text="完成"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</LinearLayout>

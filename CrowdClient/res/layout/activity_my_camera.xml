@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+     >
+      <!-- 显示预览图形 -->  
+   <SurfaceView   
+        android:id="@+id/surfaceView"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        /> 
+    <RelativeLayout 
+        android:id="@+id/my_camera_kuang"
+        android:layout_width="match_parent"
+    android:layout_height="35dp"
+        android:background="#22000000"
+        >
+        <RelativeLayout 
+            android:id="@+id/my_camera_rl_reversal_canera"
+             android:layout_width="50dp"
+    android:layout_height="35dp"
+    android:layout_centerInParent="true"
+            >
+                    <ImageView 
+                        android:id="@+id/my_camera_rl_reversal_canera1"
+            android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/camera_flashlight_open"
+            />
+        </RelativeLayout>
+    </RelativeLayout>
+	 
+        <RelativeLayout
+            android:id="@+id/my_camera_rl_wancheng"
+            android:layout_width="match_parent"  
+            android:layout_height="65dp"
+            android:background="#33000000"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+             >
+            <ImageView 
+                android:id="@+id/my_camera_iv_quxiao"
+                 android:layout_width="wrap_content"  
+            android:layout_height="40dp" 
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/camera_quxiao"
+                />
+            <ImageView 
+                android:id="@+id/my_camera_iv_ok"
+                 android:layout_width="wrap_content"  
+            android:layout_height="40dp" 
+            android:src="@drawable/camera_ok"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+                />
+            
+        </RelativeLayout>
+    
+        <!-- 相对布局，放置两个按钮 -->  
+        <!-- 拍照按钮 -->  
+        <Button   
+            android:id="@+id/takepicture"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+             android:layout_alignParentBottom="true"  
+            android:textColor="#fff"
+            android:onClick="btnOnclick"  
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/picture_click"
+            android:layout_centerHorizontal="true"
+            />  
+      
+        <ImageView 
+            android:id="@+id/my_camera_iv_focus"
+            android:layout_width="50dp"  
+            android:layout_height="50dp"  
+            android:background="#00000000"
+            android:layout_centerInParent="true"
+            
+            />
+        
+        
+        
+        
+        
+        
+        
+        
+</RelativeLayout>

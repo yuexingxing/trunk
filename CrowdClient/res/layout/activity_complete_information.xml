@@ -1,0 +1,406 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color" >
+
+        <LinearLayout
+            android:id="@+id/ll_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/notice_red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_complete_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_switch_btn"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_complete_notice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/notice_red"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="想要成为兼职小派创业致富嘛~快来认证成为小派吧"
+                android:textColor="#FFD8D2"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_complete_error"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/ll_switch_btn"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/audit_failure" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="资料审核失败，请重新提交"
+                    android:textColor="#F7123c"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_complete_notice"
+            android:orientation="vertical"
+            android:weightSum="10" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_back" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="#ffffff"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="姓    名"
+                                        android:textColor="@color/text_black"
+                                        android:textSize="14dp" />
+
+                                    <com.zhiduan.crowdclient.view.ClearEditText
+                                        android:id="@+id/edt_name_auth_manager"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="5dp"
+                                        android:background="#ffffff"
+                                        android:hint="请填本人真实姓名"
+                                        android:maxLength="50"
+                                        android:singleLine="true"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_name_auth_manager"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dp"
+                                        android:background="#ffffff"
+                                        android:textSize="14dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:hint="请填本人真实姓名"
+                                        android:visibility="gone"
+                                        android:gravity="center_vertical"
+                                        android:textColor="@color/gray_1"
+                                        />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:background="@color/gray_line" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp" >
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:orientation="horizontal" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text="身份证"
+                                            android:textColor="@color/text_black"
+                                            android:textSize="14dp" />
+
+                                        <com.zhiduan.crowdclient.view.ClearEditText
+                                            android:id="@+id/edt_id_auth_manager"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="48dp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_weight="0.42"
+                                            android:background="#ffffff"
+                                            android:digits="@string/edit_digit_auth"
+                                            android:ems="10"
+                                            android:gravity="center_vertical"
+                                            android:hint="请输入真实身份证号"
+                                            android:maxLength="18"
+                                            android:textSize="14dp" >
+                                        </com.zhiduan.crowdclient.view.ClearEditText>
+
+                                        <TextView
+                                            android:id="@+id/tv_id_auth_manager"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="48dp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_weight="0.42"
+                                            android:background="#ffffff"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="@color/gray_1"
+                                            android:gravity="center_vertical"
+                                            android:textSize="14dp"
+                                            android:visibility="gone"
+                                             />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:id="@+id/view_line_sfz"
+                                        android:layout_width="0.5dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_toLeftOf="@+id/ll_sfz_layout"
+                                        android:background="@color/gray_4"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_sfz_layout"
+                                        android:layout_width="100dp"
+                                        android:layout_height="50dp"
+                                        android:layout_alignParentRight="true"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/tv_choice_info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawableRight="@drawable/register_triangle"
+                                            android:gravity="center"
+                                            android:text="身份证   " />
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/white"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="39dp"
+                                android:background="@color/white" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="5dp"
+                                    android:text="上传本人手持证件自拍照和证件正面照片"
+                                    android:textColor="@color/gray_1"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <FrameLayout
+                                        android:layout_width="132dp"
+                                        android:layout_height="106dp" >
+
+                                        <ImageView
+                                            android:id="@+id/iv_front_photo"
+                                            android:layout_width="132dp"
+                                            android:layout_height="106dp"
+                                            android:background="@drawable/img_manager_1"
+                                            android:gravity="center" />
+
+                                        <ImageView
+                                            android:id="@+id/iv_front_photo_error_img"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/example" />
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="手持证件照"
+                                        android:textColor="@color/crop__button_text"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/register_valid"
+                                        android:gravity="center"
+                                        android:onClick="photoMySelf"
+                                        android:paddingBottom="10dp"
+                                        android:paddingTop="10dp"
+                                        android:text="拍照片"
+                                        android:textColor="@color/white"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <FrameLayout
+                                        android:layout_width="132dp"
+                                        android:layout_height="106dp" >
+
+                                        <ImageView
+                                            android:id="@+id/iv_card_photo"
+                                            android:layout_width="132dp"
+                                            android:layout_height="106dp"
+                                            android:background="@drawable/img_manager_2"
+                                            android:gravity="center" />
+
+                                        <ImageView
+                                            android:id="@+id/iv_card_photo_error_img"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/example" />
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="证件正面照片"
+                                        android:textColor="@color/crop__button_text"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/register_valid"
+                                        android:gravity="center"
+                                        android:onClick="photoFront"
+                                        android:paddingBottom="10dp"
+                                        android:paddingTop="10dp"
+                                        android:text="拍照片"
+                                        android:textColor="@color/white"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/auth_manager_btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/register_valid_gray"
+                android:clickable="false"
+                android:gravity="center"
+                android:onClick="submit_Auth"
+                android:text="提交审核"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

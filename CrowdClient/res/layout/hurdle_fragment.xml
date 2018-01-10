@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_hurdle_top_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/layout_order_search_top_menu" />
+    </LinearLayout>
+
+    <com.zhiduan.crowdclient.view.DropDownListView
+        android:id="@+id/lv_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#eeeeee"
+        android:dividerHeight="0dp"
+        android:fastScrollEnabled="false"
+        android:scrollingCache="false" />
+
+</LinearLayout>

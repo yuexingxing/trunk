@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sp="http://schemas.android.com/apk/res/com.zhiduan.crowdclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <LinearLayout
+        android:id="@+id/ll_weihao"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EEEEEE"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_tail_type"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:text="支付宝     尾号:" />
+        <TextView
+            android:id="@+id/tv_tail_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:gravity="center"
+             android:textSize="14sp"
+             android:textColor="#999999"
+            android:text="" />
+    </LinearLayout>
+
+   <com.zhiduan.crowdclient.view.MyListView
+        android:layout_below="@+id/ll_weihao"
+        android:id="@+id/change_account_lv_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="#d5d5d5"
+        android:fastScrollEnabled="true"
+        android:dividerHeight="1px"
+        android:listSelector="@drawable/selector_click_bg"
+        android:layout_marginBottom="45dp"
+        sp:right_width="120dp" >
+    </com.zhiduan.crowdclient.view.MyListView> 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/bt_change_ok"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ea3f4f"
+            android:text="确定"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</RelativeLayout>

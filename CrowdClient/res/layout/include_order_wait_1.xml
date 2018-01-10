@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/item_order_wait_layout_sms"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/item_order_abnormal_back"
+            android:layout_width="73dp"
+            android:layout_height="28dp"
+            android:background="@drawable/shape_radius_gray_round"
+            android:text="退件"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/item_order_wait_complain"
+            android:layout_width="73dp"
+            android:layout_height="28dp"
+            android:background="@drawable/selector_order_gray"
+            android:gravity="center"
+            android:text="@string/need_help"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/item_order_wait_trans"
+            android:layout_width="73dp"
+            android:layout_height="28dp"
+            android:background="@drawable/selector_order_gray"
+            android:gravity="center"
+            android:text="转单"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/item_order_wait_handle"
+            android:layout_width="73dp"
+            android:layout_height="28dp"
+            android:background="@drawable/selector_order_main_color"
+            android:gravity="center"
+            android:text="订单处理"
+            android:textColor="@drawable/selector_color_order_main_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

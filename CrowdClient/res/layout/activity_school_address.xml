@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5"
+    tools:context=".DormitoryAddressActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray_5" />
+
+        <EditText
+            android:id="@+id/edt_school_address"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="19dp"
+            android:background="#ffffff"
+            android:maxLength="50"
+            android:paddingTop="10dp"
+            android:gravity="top"
+            android:textSize="14dp"
+            android:textColorHint="@color/text_gray"
+            android:hint="请输入正确的校区地址"
+            android:textColor="#222222" />
+
+        <TextView
+            android:layout_marginTop="12dp"
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/text_black"
+            android:text="如:上海市闵行区梅陇路18号" />
+    </LinearLayout>
+
+</RelativeLayout>

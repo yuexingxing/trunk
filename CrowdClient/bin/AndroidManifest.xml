@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhiduan.crowdclient"
+    android:versionCode="19"
+    android:versionName="3.0.1" >
+
+    <!-- 11.15发布上线版本   版versionName:2.2.2 versionCode: 16 -->
+    <!-- 主版本+子版本+修正版本 -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <!-- 友盟统计 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 友盟分享权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- 短信验证码权限****************勿删 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="getui.permission.GetuiService" />
+
+    <!-- ibeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.com.zhiduan.crowdclient" />
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 替换为第三方应用的包名 -->
+    <permission
+        android:name="getui.permission.GetuiService.com.zhiduan.crowdclient"
+        android:protectionLevel="normal" >
+    </permission>
+    <!-- 替换为第三方应用的包名 -->
+    <!-- 个推SDK权限配置结束 -->
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CALL_LOG" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <!-- android:theme="@android:style/Theme.Translucent"  android:theme="@style/AppTheme" -->
+
+    <application
+        android:name="com.zhiduan.crowdclient.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5769fc70e0f55ad45000160b" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6cbc5aa637b88e3bb51f47438fb4c363" >
+        </meta-data>
+        <!-- 定位服务 -->
+        <service android:name="com.amap.api.location.APSService" >
+        </service>
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" >
+        </service>
+        <!-- 友盟分享需要的Activity -->
+
+
+        <!-- qq精简版 -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105477268" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- 微信唤起app -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="openaixuepaizb"
+                    android:scheme="zdtp" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="growing.934e4e542ba42a92" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.BaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.IndexActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx4e80aa722c6f00eb" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.BannerDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.DealActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.view.ImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.DeliveryOrderMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menusetting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menucenter.CenterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.FragmentWaitTaking"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.ForgetPasswordActivity"
+            android:label="@string/title_activity_forget_password_activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.FragmentDistribution"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.SchoolDataActivity"
+            android:label="@string/title_activity_school_data"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.FragmentSigned"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.CertificationActivity"
+            android:label="@string/title_activity_certification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.OrderDetailWaitActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.AuthSuccessActivity"
+            android:label="@string/title_activity_auth_success"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.SelectSchoolActivity"
+            android:label="@string/title_activity_select_school"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.SchoolAddressActivity"
+            android:label="@string/title_activity_school_address"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.DormitoryAddressActivity"
+            android:label="@string/title_activity_dormitory_address"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.CutPictureActivity"
+            android:label="@string/title_activity_cut_picture"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.UpdateUserPwdActivity"
+            android:label="@string/title_activity_update_user_pwd"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.OrderDetailDistributeActivity"
+            android:label="@string/title_activity_distribute_order_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.OrderDetailSignedActivity"
+            android:label="@string/title_activity_signed_order_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menucenter.UserInfoActivity"
+            android:label="@string/title_activity_user_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.GrabOrderDetailActivity"
+            android:label="@string/title_activity_grab_order_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的钱包主界面 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.MyWalletActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.AddAlipayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.ActivateWalletNoAutonymActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.WalletRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.EarningDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.WithdrawDepositScheduleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.WithdrawDepositActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.WithdrawDepositWayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.ChangeAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.AlterPassWord1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.AlterPassWord2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.AlterPassWord3Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.ActivateWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.SettingTradePwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.AddWeChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.WithdrawDepositToActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menucenter.SignedQueryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menusetting.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menusetting.AboutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.GetGoodsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.message.MessageActivity"
+            android:label="@string/title_activity_message"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.message.MessageListActivity"
+            android:label="@string/title_activity_message_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.AbnormalFragment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.AbnormalDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.EditRemarkActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.AbnormalDealActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_abnormal_deal"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.TransBillActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.DeliveryRemindActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.ZoomImageActivity"
+            android:label="@string/title_activity_zoom_image"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.message.MessageDetailContentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.OrderMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.SearchWaitingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskActivity"
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.PagerActivity"
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskUnderWayActivity"
+            android:label="@string/title_activity_under_way"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskAuditActivity"
+            android:label="@string/title_activity_audit"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskPaymentActivity"
+            android:label="@string/title_activity_payment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskCancelActivity"
+            android:label="@string/title_activity_task_cancel"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_task_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.FilterOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskAlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_abnormal_deal"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskDescribeActivity"
+            android:label="@string/title_activity_task_describe"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 风云榜 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.task.PeakActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 裁剪图片 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.view.crop.CropImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 照相机 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.photoalbum.MyCameraActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 相片展示 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.photoalbum.ShowImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 相片展示 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.photoalbum.MyPhotoAlbumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 提现收入说明 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.IncomeExplainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 跑腿业务订单详情 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.RunErrandsDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 前后摄像头的拍照 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.photoalbum.camera.MyCameraActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.OrderMenuTabActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.WalletDeductRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menucenter.AboutWeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.OrderMenuPagerActivity"
+            android:label="@string/title_activity_order_menu_pager"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.task.TaskMenuPagerActivity"
+            android:label="@string/title_activity_task_menu_pager"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.RunningDetailWaitActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.RunningDetailDistributionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.RunningDetailSignedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.RunningAbnormalDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 邀请有赏 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.share.InviteCenter_Activity"
+            android:label="@string/title_activity_share_center_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.share.ActiveRuleActivity"
+            android:label="@string/title_activity_active_rule"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.share.InvitePeopleActivity"
+            android:label="@string/title_activity_share_people"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.share.InviteIncomeActivity"
+            android:label="@string/title_activity_invite_income"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 任务订单 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.TaskOrderMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.TaskOrderMenuFisrt"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.TaskOrderMenuSecond"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 侧滑退出  activity -->
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.SwipeBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 侧滑退出 FragmentActivity -->
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.SwipeBackFragmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menucenter.OrderEvaluateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 快速登录 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.QuickLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 选择分类 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.ClassifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- IM聊天界面 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.im.ImMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- IM好友界面 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.im.ImContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 聊天页面 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.im.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- 设置环信应用的AppKey -->
+        <!-- 测试1114161215115950#dev  正式1114161215115950#pro -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1114161215115950#dev" />
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- webview -->
+        <activity
+            android:name="com.zhiduan.crowdclient.ServerMainActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx4e80aa722c6f00eb" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.task.ThoughtActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.task.ThoughtCompleteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menucenter.MyActivity"
+            android:label="@string/title_activity_my"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.share.InviteActivity"
+            android:label="@string/title_activity_invite"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.CompleteInformationActivity"
+            android:label="@string/title_activity_complete_information"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.ChangeNameActivity"
+            android:label="@string/title_activity_change_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.DeliveryRemindDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.task.TaskOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.task.TaskDetailGrabActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.task.TaskDetailWaitTakingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.task.TaskDetailSignedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.task.TaskDetailDistributionActivity"
+            android:label="@string/title_activity_task_detail_distribution" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.PerfectNameActivity"
+            android:label="@string/title_activity_perfect_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.RunningDetailGrabActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuorder.OrderDetailGrabActivity"
+            android:label="@string/title_activity_order_detail_grab" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.menuindex.ExperienceAdditionActivity"
+            android:label="@string/title_activity_order_detail_grab" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.activity.BindPhoneActivity"
+            android:label="@string/title_activity_order_detail_grab" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.im.PersonalHomepageActivity"
+            android:label="@string/title_activity_order_detail_grab" >
+        </activity>
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <!-- 测试jRnY9M5kia5ZXM5OACDFi2  正式66EUHCLr2W6lv34I6AXLM8 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="jRnY9M5kia5ZXM5OACDFi2" />
+
+        <!-- 测试2HeXBDLyEn8gaElsEaCTz7  正式IFA5nOMint51R8lXxu6fO5 -->
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="2HeXBDLyEn8gaElsEaCTz7" />
+
+        <!-- 测试t4MhQKGD9k7Cy7DsbeDAA7  正式PdBHkWzCIj5Q9WIB820wm7 -->
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="t4MhQKGD9k7Cy7DsbeDAA7" />
+
+        <!-- 配置第三方Receiver -->
+        <!-- 测试jRnY9M5kia5ZXM5OACDFi2  正式66EUHCLr2W6lv34I6AXLM8 -->
+        <receiver
+            android:name="com.zhiduan.crowdclient.pm.PushMessageReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.jRnY9M5kia5ZXM5OACDFi2" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.igexin.sdk.PushServiceUser"
+            android:exported="true"
+            android:label="NotificationCenterUser" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.user.message" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.com.zhiduan.crowdclient"
+            android:exported="true"
+            android:process=":pushservice" />
+        <!-- 个推SDK配置结束 -->
+
+        <activity
+            android:name="com.zhiduan.crowdclient.menucenter.ChangeNameActivity"
+            android:label="@string/title_activity_change_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhiduan.crowdclient.completeinformation.PerfectNameActivity"
+            android:label="@string/title_activity_perfect_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 支付宝支付，这个是在没有客户端的情况下发起网页支付， -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- 微信支付 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信第三方授权登录 -->
+        <activity
+            android:name="com.zhiduan.crowdclient.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.zhiduan.crowdclient.wallet.UserActiveWalletActivity"
+            android:label="@string/title_activity_user_active_wallet" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            >
+        </activity>
+    </application>
+
+</manifest>

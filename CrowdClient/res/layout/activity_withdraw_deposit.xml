@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/register_wallet_whiter"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/withdraw_deposit_rl_way"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                 android:id="@+id/withdraw_deposit_tv_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现方式" />
+            <TextView
+                android:id="@+id/withdraw_deposit_tv_name"
+                android:layout_toRightOf="@id/withdraw_deposit_tv_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/withdraw_deposit_iv_you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/wallet_arrow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/withdraw_deposit_iv_you"
+                android:src="@drawable/wallet_zhifubao" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:background="#22000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="提现金额" />
+
+       
+        <LinearLayout 
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            >
+             <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="¥"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:textSize="30sp" />
+            <EditText 
+                android:id="@+id/withdraw_deposit_et_money"
+                 android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:inputType="numberDecimal"
+            android:hint="                            "
+            android:background="@null"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#22000000" />
+<RelativeLayout 
+     android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+    >
+    
+      <TextView
+            android:id="@+id/withdraw_deposit_tv_depositmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:text="每日最多可提现 ￥0.00"
+            android:textSize="10sp" />
+      <TextView
+            android:id="@+id/withdraw_deposit_tv_ci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="次"
+            android:layout_marginRight="10dp"
+            android:textColor="#999999"
+            android:textSize="10sp" />
+      <TextView
+            android:id="@+id/withdraw_deposit_tv_cishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/withdraw_deposit_tv_ci"
+            android:text="3"
+            android:textColor="#e93948"
+            android:textSize="10sp" />
+      <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/withdraw_deposit_tv_cishu"
+            android:text="免费手续费提现"
+            android:textColor="#999999"
+            android:textSize="10sp" />
+    
+</RelativeLayout>
+      
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/withdraw_deposit_bt_deposit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register_valid_blue"
+        android:text="确认提现"
+        android:textColor="@color/white" />
+
+</LinearLayout>

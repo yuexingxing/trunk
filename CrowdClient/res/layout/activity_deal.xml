@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <WebView
+            android:id="@+id/webView_deal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:layout_weight="2"
+        android:padding="20dp" >
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/register_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/register_valid"
+            android:gravity="center"
+            android:onClick="nextStep"
+            android:text="我已阅读并同意本用户协议"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

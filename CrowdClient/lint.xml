@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="DrawAllocation" severity="ignore" />
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="InlinedApi">
+        <ignore path="src/com/zhiduan/crowdclient/menuindex/TaskOrderMenuActivity.java" />
+        <ignore path="src/com/zhiduan/crowdclient/menuorder/FilterOrderActivity.java" />
+        <ignore path="src/com/zhiduan/crowdclient/menuorder/GetGoodsActivity.java" />
+        <ignore path="src/com/zhiduan/crowdclient/menuorder/OrderMenuTabActivity.java" />
+        <ignore path="src/com/zhiduan/crowdclient/menuorder/SearchWaitingActivity.java" />
+        <ignore path="src/com/zhiduan/crowdclient/menuorder/TransBillActivity.java" />
+    </issue>
+    <issue id="NewApi" severity="ignore" />
+    <issue id="ResourceAsColor">
+        <ignore path="src/com/zhiduan/crowdclient/menuindex/TaskOrderMenuActivity.java" />
+    </issue>
+    <issue id="SetJavaScriptEnabled" severity="ignore" />
+    <issue id="SimpleDateFormat" severity="ignore" />
+    <issue id="Wakelock" severity="ignore" />
+    <issue id="WrongCall">
+        <ignore path="src/com/zhiduan/crowdclient/order/timecount/CountdownView.java" />
+    </issue>
+</lint>

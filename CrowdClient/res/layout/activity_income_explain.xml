@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+<RelativeLayout 
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+        >
+        
+        <TextView 
+            android:id="@+id/income_explain_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:text="提成说明：你团队及商户每一单将会为你带来一定比例提成"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/income_explain_tv_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="团队订单数："
+            android:textColor="#1d1d26"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/income_explain_tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/income_explain_tv_order_number"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ea3f4f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/income_explain_tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="￥0.00"
+            android:textColor="#ea3f4f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/income_explain_tv_deduct_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/income_explain_tv_money"
+            android:gravity="center"
+            android:text="提成："
+            android:textColor="#1d1d26"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#eeeeee"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/income_explain_rl_type2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/income_explain_tv_order_number2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="商户订单数："
+            android:textColor="#1d1d26"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/income_explain_tv_number2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/income_explain_tv_order_number2"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ea3f4f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/income_explain_tv_money2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="￥0.00"
+            android:textColor="#ea3f4f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/income_explain_tv_deduct_money2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/income_explain_tv_money2"
+            android:gravity="center"
+            android:text="商户订单佣金："
+            android:textColor="#1d1d26"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#eeeeee"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+</LinearLayout>

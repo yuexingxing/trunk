@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/include_order_detail_1" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/include_order_detail_2" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/include_order_detail_3" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/include_order_detail_4" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <include
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/include_order_detail_reward" />
+
+        <LinearLayout
+            android:id="@+id/signed_detail_back_complain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/include_order_detail_6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signed_detail_complain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/include_order_detail_9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signed_detail_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="交易完成"
+                android:textColor="@color/main_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|right"
+        android:onClick="onComplain"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/orders_submit_an_appeal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
+            android:text="@string/need_help"
+            android:textColor="@color/text_gray3"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/include_7_order_detail_handle"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_button_main_color"
+        android:onClick="thought"
+        android:text="评价"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

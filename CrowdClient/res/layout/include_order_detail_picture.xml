@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout11"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:text="已报名小派"
+        android:textColor="@color/gray_4" />
+
+    <com.zhiduan.crowdclient.view.MyGridView
+        android:id="@+id/include_6_gridview_picture"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="10" />
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="倒计时"
+            android:textColor="@color/text_point"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_horizontal" >
+
+            <com.zhiduan.crowdclient.order.timecount.CountdownView
+                android:id="@+id/item_remind_detail_timecount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowHour="false"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isTimeTextBold="true"
+                app:suffixGravity="center"
+                app:suffixTextColor="@color/black"
+                app:suffixTextSize="24sp"
+                app:timeTextColor="@color/black"
+                app:timeTextSize="24sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_remind_detail_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="正在邀请黄半仙 12345679 帮忙处理订单"
+            android:textColor="@color/text_gray3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_remind_detail_state"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="转单中"
+            android:textColor="@color/main_color"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background_gray" />
+
+</LinearLayout>

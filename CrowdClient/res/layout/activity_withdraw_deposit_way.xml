@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="使用第三方平台提现" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <RelativeLayout
+            android:id="@+id/withdraw_deposit_way_rl_zhifubao"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            >
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/withdraw_deposit_way_iv_zhifubao"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/wallet_zhifubao" />
+
+            <LinearLayout
+                 android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/withdraw_deposit_way_iv_zhifubao"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:textSize="16sp"
+                    android:text="支付宝"/>
+                <TextView
+                    android:id="@+id/withdraw_deposit_way_tv_zhifubao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10dp"
+                    android:text="暂未绑定"/>
+            </LinearLayout>
+            
+            <ImageView 
+                  android:id="@+id/withdraw_deposit_way_iv_zhifubaoselect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/order_notselected"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                
+                />
+        </RelativeLayout>
+        <ImageView 
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginLeft="15dp"
+                />
+        <RelativeLayout
+             android:id="@+id/withdraw_deposit_way_rl_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            >
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/withdraw_deposit_way_iv_weixin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/wallet_weixin" />
+
+            <LinearLayout
+                 android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/withdraw_deposit_way_iv_weixin"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:textSize="16sp"
+                    android:text="微信"/>
+                <TextView
+                     android:id="@+id/withdraw_deposit_way_tv_weixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10dp"
+                    android:text="暂未绑定"/>
+            </LinearLayout>
+            
+            <ImageView 
+                 android:id="@+id/withdraw_deposit_way_iv_weixinselect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/order_selected"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                
+                />
+        </RelativeLayout>
+    </LinearLayout>
+	<ImageView 
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#11000000"
+                />
+</LinearLayout>

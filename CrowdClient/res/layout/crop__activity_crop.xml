@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_crop_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/main_color" />
+
+    <include
+        android:id="@+id/done_cancel_bar"
+        android:background="@color/main_color"
+        layout="@layout/crop__layout_done_cancel" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/crop__texture" >
+
+        <com.zhiduan.crowdclient.view.crop.CropImageView
+            android:id="@+id/crop_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

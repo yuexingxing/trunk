@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:background="@drawable/task_billboard" >
+
+        <LinearLayout
+            android:id="@+id/peak_silver_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/silver"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:rotation="-20" >
+
+            <com.zhiduan.crowdclient.zxing.view.CircularImage
+                android:id="@+id/peak_silver_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_logo" />
+
+            <TextView
+                android:id="@+id/peak_silver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jiujiu"
+                android:textColor="#ff0000" />
+
+            <TextView
+                android:id="@+id/peak_silver_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y43423"
+                android:textColor="#ff0000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/gold"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.zhiduan.crowdclient.zxing.view.CircularImage
+                android:id="@+id/peak_gold_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_logo" />
+
+            <TextView
+                android:id="@+id/peak_gold_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jiujiu"
+                android:textColor="#ff0000" />
+
+            <TextView
+                android:id="@+id/peak_gold_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y43423"
+                android:textColor="#ff0000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/copper"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:rotation="20" >
+
+            <com.zhiduan.crowdclient.zxing.view.CircularImage
+                android:id="@+id/peak_copper_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_logo" />
+
+            <TextView
+                android:id="@+id/peak_copper_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jiujiu"
+                android:textColor="#ff0000" />
+
+            <TextView
+                android:id="@+id/peak_copper_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y43423"
+                android:textColor="#ff0000" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/index_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#00000000"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/view_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="#00000000" />
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#00000000" >
+
+            <LinearLayout
+                android:id="@+id/peak_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:onClick="back" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/profile_backoff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="风云榜"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.zhiduan.crowdclient.view.DropDownListView
+        android:id="@+id/peak_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fastScrollEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:scrollingCache="false" >
+    </com.zhiduan.crowdclient.view.DropDownListView>
+
+</LinearLayout>

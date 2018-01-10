@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#e2e2e2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:background="#fff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="金额(元)"
+                android:textColor="#222222"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/withdaw_deposit_et_money"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@null"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:background="#e2e2e2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:background="#fff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="余额"
+                android:textColor="#999999"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/withdaw_deposit_balance_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:text="￥0.00"
+                android:textColor="#999999"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="#e2e2e2"
+	    />
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="#e2e2e2"
+	    android:layout_marginTop="8dp"
+        
+	    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:background="#fff"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="使用第三方平台提现"
+                android:textColor="#37383D"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:textColor="#37383D"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:background="#e2e2e2" />
+
+        <LinearLayout
+            android:id="@+id/ll_wallet_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="#fff"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/wallet_alipay_iv_tup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/wallet_zhigubao" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="支付宝"
+                    android:textColor="#222222"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/ll_wallet_alipay_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="暂未绑定"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_switch_alipay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/msg_status" 
+                    android:scaleType="centerInside"
+                    />
+
+                <RelativeLayout 
+				     android:id="@+id/withdaw_deposit_rl_add_zhifubao"
+				    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+				    android:gravity="center"
+				    >
+				    <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/wallet_edit"
+                     />
+				    
+				</RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/wallet_withdraw_xian"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="90dp"
+            android:background="#e2e2e2" />
+
+        <LinearLayout
+             android:id="@+id/ll_wallet_wechat"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="#fff"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                 android:scaleType="centerInside"
+                android:src="@drawable/wallet_weixin" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="微信"
+                    android:textColor="#222222"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/ll_wallet_wechat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="暂未绑定"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_switch_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/msg_status" />
+
+                 <RelativeLayout 
+				      android:id="@+id/withdaw_deposit_rl_add_weixin"
+				    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+				    android:gravity="center"
+				    >
+				    <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/wallet_edit"
+                     />
+				    
+				</RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="#e2e2e2"
+	    android:layout_marginBottom="8dp"
+	    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/withdaw_deposit_bt_ok"
+           android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/register_valid_blue"
+            android:text="确认提现"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</LinearLayout>

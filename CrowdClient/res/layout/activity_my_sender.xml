@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/my_sender_tv_order_number"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="订单号 :"
+        android:textColor="#222222"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/my_sender_rl_express_company"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:onClick="selectExpress"
+        android:background="#ffffff" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="快递公司"
+            android:textColor="#222222"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/my_sender_iv_i"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11dp"
+            android:src="@drawable/wallet_arrow" />
+
+        <TextView
+             android:id="@+id/my_sender_tv_express"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/my_sender_iv_i"
+            android:gravity="center_vertical"
+            android:text="请选择"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/my_sender_tv_prepay_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="预付"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/my_sender_tv_prepay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/my_sender_tv_prepay_text"
+                android:gravity="center_vertical"
+                android:text="1"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/my_sender_tv_prepay"
+                android:gravity="center_vertical"
+                android:text="kg"
+                android:textColor="#999999"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/my_sender_tv_prepay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="28dp"
+                android:gravity="center_vertical"
+                android:text="￥0.0"
+                android:textColor="#222222"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="#d5d5d5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/my_sender_tv_handle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="应付"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/my_sender_iv_handle_last"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/my_sender_tv_handle_text"
+                android:background="@drawable/less"
+                android:onClick="last" />
+
+            <TextView
+                android:id="@+id/my_sender_tv_handle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/my_sender_iv_handle_last"
+                android:gravity="center_vertical"
+                android:text="1"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/my_sender_tv_handle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/my_sender_tv_handle"
+                android:gravity="center_vertical"
+                android:text="kg"
+                android:textColor="#999999"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/my_sender_iv_handle_naxt"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/my_sender_tv_handle_1"
+                android:background="@drawable/plus"
+                android:onClick="next" />
+
+            <EditText
+                android:id="@+id/my_sender_et_handle_money"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:inputType="number"
+                android:hint="0.00"
+                android:textColor="#ea3f4f"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/my_sender_et_handle_money"
+                android:gravity="center_vertical"
+                android:text="￥"
+                android:textColor="#ea3f4f"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="#d5d5d5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/my_sender_tv_balance_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="差额"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/my_sender_tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="28dp"
+                android:gravity="center_vertical"
+                android:text="￥0.0"
+                android:textColor="#222222"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="运单号"
+            android:textColor="#222222"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/my_sender_et_numbers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@null"
+            android:hint="请输入运单号或扫描"
+            android:inputType="number"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/my_sender_rl_scan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="scan" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/order_scancode" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/register_valid_blue"
+        android:onClick="ok"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

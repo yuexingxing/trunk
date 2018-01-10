@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#E5E5E5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+             android:id="@+id/ll_auth_user"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:visibility="gone"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="14dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="姓          名  "
+                    android:textColor="@color/gray_1"
+                    android:textSize="14dp" />
+
+                <com.zhiduan.crowdclient.view.ClearEditText
+                    android:id="@+id/edt_activate_name"
+                    style="@style/register_text_size"
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="14sp"
+                    android:layout_weight="7"
+                    android:background="#ffffff"
+                    android:hint="请输入本人姓名"
+                    android:maxLength="18"
+                    android:textColor="#999999" />
+                <TextView
+                    android:id="@+id/tv_activate_name"
+                    style="@style/register_text_size"
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="14sp"
+                    android:layout_weight="7"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:background="#ffffff"
+                    android:maxLength="18"
+                    android:textColor="#999999" />
+                
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="14dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="身份证号码  "
+                    android:textColor="@color/gray_1"
+                    android:textSize="14dp" />
+
+                <com.zhiduan.crowdclient.view.ClearEditText
+                    android:id="@+id/edt_activate_id"
+                    style="@style/register_text_size"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="14sp"
+                    android:layout_weight="7"
+                    android:background="#ffffff"
+                    android:digits="@string/edit_digit_auth"
+                    android:hint="请输入本人身份证号"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:textColor="#999999" />
+
+                <TextView
+                    android:id="@+id/tv_activate_id"
+                    style="@style/register_text_size"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="14sp"
+                    android:layout_weight="7"
+                    android:background="#ffffff"
+                    android:digits="@string/edit_digit_auth"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:textColor="#999999"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/gray_back"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="手机号  "
+                android:textColor="@color/gray_1"
+                android:textSize="14dp" />
+
+         <!--    <EditText
+                android:id="@+id/edt_activate_phone"
+                style="@style/register_text_size"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="#999999" /> -->
+
+            <TextView
+                android:id="@+id/tv_activate_phone"
+                style="@style/register_text_size"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:textColor="#999999"
+                 />
+
+            <Button
+                android:id="@+id/btn_activate_code"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="getVerCode"
+                android:text="获取验证码"
+                android:textColor="@color/gray_1"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="14dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="验证码  "
+                    android:textColor="@color/gray_1"
+                    android:textSize="14dp" />
+
+                <com.zhiduan.crowdclient.view.ClearEditText
+                    android:id="@+id/edt_activate_code"
+                    style="@style/register_text_size"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="14sp"
+                    android:layout_weight="7"
+                    android:background="#ffffff"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="#999999" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E5E5E5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="25dp" >
+
+        <Button
+            android:id="@+id/btn_activate_next"
+            style="@style/register_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/register_valid_gray"
+            android:clickable="false"
+            android:gravity="center"
+            android:onClick="nextStep"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/item_left_layout_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textColor="#222222"
+            android:layout_marginLeft="10dp"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:textColor="#222222"
+            android:text="785445645" />
+
+        <ImageView
+            android:id="@+id/iv_check_status"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/msg_status_select" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_delete_layout_account"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <TextView
+            android:id="@+id/item_right_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff3b30"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

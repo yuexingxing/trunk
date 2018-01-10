@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    tools:context=".TaskDescribeActivity" >
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/edt_task_describe"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="start"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/text_gray"
+        android:textColor="@color/text_black"
+        android:background="@color/white"
+        android:hint="请填写你在任务中遇见的问题以及任务信息描述等" />
+
+</RelativeLayout>

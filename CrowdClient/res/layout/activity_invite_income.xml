@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_back"
+    tools:context=".InviteIncomeActivity" >
+
+    <com.zhiduan.crowdclient.view.DropDownListView
+        android:id="@+id/list_invite_income"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:cacheColorHint="@color/transparent"
+         android:divider="@color/gray_line"
+        android:dividerHeight="0.5dp"
+        android:fastScrollEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:scrollingCache="false" />
+</RelativeLayout>

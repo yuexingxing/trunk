@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right"
+        android:paddingRight="12dp"
+        android:text="审核处理中"
+        android:textColor="@color/main_color" />
+
+    <Button
+        android:id="@+id/include_order_detail_6_btn_revoke"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="@color/main_color"
+        android:onClick="backComplain"
+        android:text="撤回申述"
+        android:textColor="@color/white" />
+
+</LinearLayout>

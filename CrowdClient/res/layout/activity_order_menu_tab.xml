@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/layout_order_top"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/main_color"
+            android:visibility="gone" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_order_menu" />
+
+        <LinearLayout
+            android:id="@+id/ll_order_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/fl_bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_order_wait"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="waitTaking"
+                            android:text="待处理(0)"
+                            android:textColor="@color/main_color"
+                            android:textSize="13dp" />
+
+                        <View
+                            android:id="@+id/view_wait"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/main_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_order_sending"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="distribution"
+                            android:text="进行中(0)"
+                            android:textColor="@color/gray_4"
+                            android:textSize="13dp" />
+
+                        <View
+                            android:id="@+id/view_sending"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/transparent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_order_signed"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="signed"
+                            android:text="已完成(0)"
+                            android:textColor="@color/gray_4"
+                            android:textSize="13dp" />
+
+                        <View
+                            android:id="@+id/view_signed"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/transparent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_order_abnormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="abNormal"
+                            android:text="异常件(0)"
+                            android:textColor="@color/gray_4"
+                            android:textSize="13dp" />
+
+                        <View
+                            android:id="@+id/view_abnormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/transparent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_delivery_order_menu_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/layout_delivery_order_menu_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray_background" />
+
+        <!-- Tab 内容 -->
+
+        <LinearLayout
+            android:id="@+id/ll_order_content"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</TabHost>

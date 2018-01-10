@@ -1,0 +1,208 @@
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".InviteActivity" >
+	<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_share_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/personal_center_fig" />
+
+    <TextView
+        android:id="@+id/tv_look_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/invite_friends_view"
+        android:gravity="center"
+        android:padding="5dp"
+        android:paddingBottom="10dp"
+        android:text="   查看活动规则>>"
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_share_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="你的邀请码"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/gray_1"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/gray_back"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_invite_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textColor="#626262"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text="点我复制"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="@color/red_share"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/shape_invite_white_money"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/rl_invite_people"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <!--
+                         <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/number_of_people" />
+                    -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="邀请人数"
+                        android:textSize="13dp"
+                        android:textColor="#4c4c4c" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_invite_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textSize="23dp"
+                    android:textColor="@color/red_share" />
+            </LinearLayout>
+
+            <!--
+                 <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0"
+                android:background="@color/gray_2" />
+            -->
+
+            <LinearLayout
+                android:id="@+id/rl_invite_income"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <!--
+                         <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/income" />
+                    -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="邀请奖励"
+                        android:textColor="#4c4c4c"
+                        android:textSize="13dp"
+                         />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_invite_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                     android:textSize="23dp"
+                    android:textColor="@color/main_color" />
+            </LinearLayout>
+            
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_share_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/register_valid"
+            android:text="分享邀请"
+            android:textColor="@color/white" />
+        
+        <Button
+            android:id="@+id/btn_face_share"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/shape_invite_income"
+            android:text="面对面邀请"
+            android:layout_marginBottom="30dp"
+            android:textSize="15dp"
+            android:textColor="@color/red_share" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

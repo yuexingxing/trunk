@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_back"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#f7123c" />
+
+    <RelativeLayout
+        android:id="@+id/rl_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="#f7123c"
+        android:paddingBottom="20dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f7123c" />
+
+        <LinearLayout
+            android:id="@+id/rl_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/personal_center_settings" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/personal_center_customer_service" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:layout_width="83dp"
+                android:layout_height="83dp" >
+
+                <RelativeLayout
+                    android:layout_width="73dp"
+                    android:layout_height="73dp" >
+
+                    <View
+                        android:layout_width="73dp"
+                        android:layout_height="73dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/round_corners_layout" />
+
+                    <com.zhiduan.crowdclient.zxing.view.CircularImage
+                        android:id="@+id/iv_user_icon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/head_portrait" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_user_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="13dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/center_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/center_tv_level"
+                    android:layout_width="31dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape_level_corner"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/center_tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/center_tv_campus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/personal_center_address"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.zhiduan.crowdclient.zxing.view.WaveView
+        android:id="@+id/waveview"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#f7123c" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_money_hunter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/personal_center_bounty" />
+
+                <TextView
+                    android:id="@+id/tv_my_pocket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="赏金猎人"
+                    android:textColor="@color/text_black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_my_pocket"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/personal_center_wallet" />
+
+                <TextView
+                    android:id="@+id/tv_my_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="我的钱包"
+                    android:textColor="@color/text_black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_experience"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="78dp"
+                    android:layout_height="21dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_experience_level_corner"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:src="@drawable/personal_center_experience" />
+
+                    <TextView
+                        android:id="@+id/tv_my_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/white"
+                        android:textSize="11dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_my_pocket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="经验值"
+                    android:textColor="@color/text_black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

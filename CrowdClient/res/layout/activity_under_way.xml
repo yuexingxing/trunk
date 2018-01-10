@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_back"
+    tools:context=".TaskUnderWayActivity" >
+
+    <com.zhiduan.crowdclient.view.DropDownListView
+        android:id="@+id/lv_task_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/push_message_layout"
+        android:layout_gravity="center_horizontal"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/main_bg_color"
+        android:fastScrollEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:scrollingCache="false" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/not_data_img"
+         />
+    
+
+</RelativeLayout>

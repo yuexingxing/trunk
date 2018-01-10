@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE" >
+
+    <RelativeLayout
+        android:id="@+id/wallet_record_rl"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/wallet_record_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/commission_income" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/wallet_record_iv"
+            android:text="提成收入"
+            android:textColor="#222222"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/wallet_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+         android:id="@+id/wallet_record_lv_xian"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/wallet_record_rl"
+        android:layout_marginLeft="15dp"
+        android:visibility="gone"
+        android:background="#d5d5d5" />
+
+    <com.zhiduan.crowdclient.view.DropDownListView
+        android:id="@+id/wallet_record_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/wallet_record_rl"
+        android:layout_marginBottom="5dp"
+        android:divider="@color/gray_line"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" >
+    </com.zhiduan.crowdclient.view.DropDownListView>
+
+</RelativeLayout>

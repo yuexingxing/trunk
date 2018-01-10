@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/one_button_rl_shut_down"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true" >
+
+        <ImageView
+            android:id="@+id/one_button_iv_shut_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/shut_down" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/one_button_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_radius_white" >
+
+        <TextView
+            android:id="@+id/one_button_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="您转给小派红裙的订单已经接收，请知晓"
+            android:textColor="@color/text_point"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/one_button_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/one_button_tv_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="转单任务已完成"
+            android:textColor="@color/main_color"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/one_button_bt_one"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_radius_red_bt_one"
+            android:text="好的"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/one_button_iv_carry_out"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dialog_icon_1" />
+
+</RelativeLayout>

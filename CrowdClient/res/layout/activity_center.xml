@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee" >
+
+    <ScrollView
+        android:id="@+id/scr_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:background="#eeeeee" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 个人中心头 -->
+
+            <include layout="@layout/activity_center_hend" />
+            <!-- 数据中心 -->
+
+            <RelativeLayout
+                android:id="@+id/center_rl_data_center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="11dp"
+                android:background="#ffffff"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/center_iv_data_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/data_center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_data_center"
+                    android:text="数据中心"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+            <!-- 工作状态 -->
+
+            <RelativeLayout
+                android:id="@+id/center_rl_working_condition"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="11dp"
+                android:background="#ffffff" >
+
+                <ImageView
+                    android:id="@+id/center_iv_working_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/working_condition" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_working_condition"
+                    android:text="工作状态"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_switch_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/driver_state_switch_selector"
+                    android:checked="false"
+                    android:textColor="#b2FFFFFF"
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/order_evaluate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="11dp"
+                android:background="#ffffff"
+                android:clickable="true" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="#d5d5d5" />
+
+                <ImageView
+                    android:id="@+id/center_iv_consumer_hotline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/order_evaluation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_consumer_hotline"
+                    android:text="订单评价"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/center_rl_news_center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#ffffff" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="#d5d5d5" />
+                
+                <ImageView
+                    android:id="@+id/center_iv_news_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/information_center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_news_center"
+                    android:text="信息中心"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/center_rl_task_center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:onClick="taskOrder" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="#d5d5d5" />
+
+                <ImageView
+                    android:id="@+id/center_iv_task_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/task_center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_task_center"
+                    android:text="任务中心"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:onClick="shareApp" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="#d5d5d5" />
+
+                <ImageView
+                    android:id="@+id/center_iv_consumer_hotline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/invitation_to_reward" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_consumer_hotline"
+                    android:text="邀请有赏"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/version_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+
+            <!-- 意见反馈 -->
+
+            <RelativeLayout
+                android:id="@+id/center_rl_center_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="11dp"
+                android:background="#ffffff" >
+
+                <ImageView
+                    android:id="@+id/center_iv_center_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/center_feedback" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_center_feedback"
+                    android:text="帮助与反馈"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+
+            <!-- 关于爱学派 -->
+
+            <RelativeLayout
+                android:id="@+id/center_rl_center_on"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#ffffff" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="#d5d5d5" />
+
+                <ImageView
+                    android:id="@+id/center_iv_center_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/center_on" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_center_on"
+                    android:text="关于爱学派"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+            <!-- 客服电话 -->
+
+            <RelativeLayout
+                android:id="@+id/center_rl_consumer_hotline"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#ffffff" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="#d5d5d5" />
+
+                <ImageView
+                    android:id="@+id/center_iv_consumer_hotline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/consumer_hotline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_consumer_hotline"
+                    android:text="客服电话"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/center_iv_consumer_hotline_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/center_iv_consumer_hotline_right"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="400-166-1098"
+                    android:textColor="@color/gray_4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:onClick="checkVersion" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="#d5d5d5" />
+
+                <ImageView
+                    android:id="@+id/center_iv_consumer_hotline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/version_number" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/center_iv_consumer_hotline"
+                    android:text="版本号"
+                    android:textColor="#1d1d26"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_center_version_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/version_arrow"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="v1.0.0"
+                    android:textColor="@color/gray_4" />
+
+                <ImageView
+                    android:id="@+id/version_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_center_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/click_before"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/main_color"
+        android:clickable="true"
+        android:onClick="Exit_login"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:visibility="invisible" >
+    </Button>
+
+</RelativeLayout>

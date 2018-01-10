@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_feed_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_6"
+    android:orientation="vertical" >
+<RelativeLayout 
+    android:id="@+id/back_reason_rl"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#ffffff"
+    >
+    <TextView 
+        android:id="@+id/back_reason_tv_id"
+        android:layout_marginLeft="10dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:text="订单号：12356"
+        android:textColor="#222222"
+        android:textSize="13sp"
+        
+        />
+    <TextView 
+        android:id="@+id/back_reason_tv_ex"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:text="快递公司"
+        android:textColor="#222222"
+        android:textSize="13sp"
+        
+        />
+</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <EditText
+                android:id="@+id/edt_back_reason_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:background="@null"
+                android:maxLines="3"
+                android:hint="请填写您的退件原因"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

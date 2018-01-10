@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee" >
+
+    <com.zhiduan.crowdclient.banner.Banner
+        android:id="@+id/index_ad"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/banner_default" >
+    </com.zhiduan.crowdclient.banner.Banner>
+
+    <LinearLayout
+        android:id="@+id/index_ad_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/index_ad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:button="@drawable/btn_radio_holo_light1"
+        android:clickable="false"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/push_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/index_ad_radio"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:src="@drawable/homepage_notice" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#eeeeee" />
+
+            <TextView
+                android:id="@+id/push_assgned_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="转单通知:张三请您帮忙送zd3242343包裹"
+                android:textColor="@color/main_color" />
+
+            <ImageView
+                android:id="@+id/close_push_notif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/homepage_close" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#eeeeee" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_task_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/push_message_layout"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <com.zhiduan.crowdclient.menuindex.filterlistview.FixedGridView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gv_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:listSelector="@android:color/transparent"            android:numColumns="3"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth" />
+    </LinearLayout>
+
+</RelativeLayout>

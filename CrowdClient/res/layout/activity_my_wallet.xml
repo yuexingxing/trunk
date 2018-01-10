@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wallet_balance" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="我的余额"
+            android:textColor="#cc1d1d26"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/my_wallet_bt_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="￥0.00"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/my_wallet_shangxian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="每日提现上限10000.00元"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/my_wallet_bt_withdraw_deposit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/register_valid_blue"
+            android:text="提现"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:id="@+id/my_wallet_tv_tixianshouxufei"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#999999"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/my_wallet_tv_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="提成收入说明"
+                android:textColor="#ea3f4f"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.zhiduan.crowdclient.view.DrawerUpView
+        android:id="@+id/my_wallet_bt_withdraw_f"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.zhiduan.crowdclient.view.DrawerUpView> 
+
+</RelativeLayout>

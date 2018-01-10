@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee" >
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="165dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_setting_trade_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="设置交易密码"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/dialog_input_password_1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_left_biankuang"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword" />
+
+                <EditText
+                    android:id="@+id/dialog_input_password_2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_zhong_biankuang"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword" />
+
+                <EditText
+                    android:id="@+id/dialog_input_password_3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_zhong_biankuang"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword" />
+
+                <EditText
+                    android:id="@+id/dialog_input_password_4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_zhong_biankuang"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword" />
+
+                <EditText
+                    android:id="@+id/dialog_input_password_5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_zhong_biankuang"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword" />
+
+                <EditText
+                    android:id="@+id/dialog_input_password_6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_right_biankuang"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="numberPassword" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/dialog_input_password_7"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:maxLength="6"
+                android:inputType="numberPassword"
+                android:textColor="@color/transparent"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

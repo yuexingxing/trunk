@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_back"
+    android:orientation="vertical"
+    tools:context=".ChangeNameActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:layout_marginRight="5dp"
+            android:text="用户名:" />
+
+        <com.zhiduan.crowdclient.view.ClearEditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="#ffffff"
+             android:textColor="@color/text_black"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_change_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:onClick="submit_change"
+        android:background="@drawable/register_valid_gray"
+        android:gravity="center"
+        android:text="确认修改" />
+
+</LinearLayout>

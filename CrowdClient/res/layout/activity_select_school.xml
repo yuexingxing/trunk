@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/main_color"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="back" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:src="@drawable/profile_backoff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="6"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_radius_order_search"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                 android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_magnifier" />
+
+            <com.zhiduan.crowdclient.view.ClearEditText
+                android:id="@+id/select_school_edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:background="#00000000"
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:hint="输入学校名称"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_select_school_city"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectCity"
+                android:text="选择城市"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectCity"
+                android:src="@drawable/img_register_down" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8" >
+
+        <ListView
+            android:id="@+id/listView_select_school"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/gray_5"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="bottom"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/select_school_btn_ok"
+            style="@style/register_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/register_next"
+            android:gravity="center"
+            android:onClick="nextStep"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

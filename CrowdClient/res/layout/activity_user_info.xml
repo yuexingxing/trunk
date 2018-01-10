@@ -1,0 +1,351 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_user_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_back"
+    tools:context=".CenterActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray_back" />
+
+        <RelativeLayout
+            android:id="@+id/rl_user_head"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="头像"
+                android:textColor="@color/gray_1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_head"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/iv_user_icon_line" >
+                <ImageView
+                    android:id="@+id/imv_defalt_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/head_portrait" />
+
+                <com.zhiduan.crowdclient.zxing.view.CircularImage
+                    android:id="@+id/iv_user_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+               
+
+               <!--  <com.zhiduan.crowdclient.view.XCRoundRectImageView
+                    android:id="@+id/iv_user_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shape_corner" /> -->
+
+            <ImageView
+                android:id="@+id/iv_user_icon_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/wallet_arrow" />
+        </RelativeLayout>
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_user_data"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="账号"
+                    android:textColor="@color/gray_1" />
+
+                <TextView
+                    android:id="@+id/tv_user_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/gray_4" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="用户名"
+                    android:textColor="@color/gray_1" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/iv_name_line"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/crop__button_text" />
+
+                <ImageView
+                    android:id="@+id/iv_name_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/wallet_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_select_sex"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="性别"
+                    android:textColor="@color/gray_1" />
+
+                <TextView
+                    android:id="@+id/tv_user_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@+id/iv_sex_arrow"
+                    android:textColor="@color/crop__button_text" />
+                 <ImageView
+                     android:id="@+id/iv_sex_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/wallet_arrow" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/gray_back" />
+            <RelativeLayout
+                android:id="@+id/rl_school_data"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="学校信息"
+                    android:textColor="@color/gray_1" />
+
+                <TextView
+                    android:id="@+id/tv_school_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@+id/tv_restart_auth"
+                    android:textColor="@color/crop__button_text" />
+                <TextView
+                    android:id="@+id/tv_restart_auth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:text="重新提交审核"
+                    android:background="@drawable/register_valid"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/gray_line" />
+<!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="宿舍信息"
+                    android:textColor="@color/text_black" />
+
+                <TextView
+                    android:id="@+id/tv_dormitry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                     android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/gray_4" />
+
+                
+            </RelativeLayout> -->
+            <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@color/gray_back" />
+            <RelativeLayout
+                android:id="@+id/rl_auth"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="审核情况"
+                    android:textColor="@color/gray_1" />
+                <TextView
+                    android:id="@+id/tv_auth_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/crop__button_text" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_line" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@color/gray_back" />
+
+        <RelativeLayout
+            android:id="@+id/rl_change_psd"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="重置密码"
+                android:textColor="@color/gray_1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/wallet_arrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_back" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/tv_exit"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_radius_gray"
+        android:clickable="true"
+        android:onClick="Exit_login"
+        android:text="退出当前账号"
+        android:textSize="15dp"
+        android:textColor="#F7123C" />
+
+</RelativeLayout>

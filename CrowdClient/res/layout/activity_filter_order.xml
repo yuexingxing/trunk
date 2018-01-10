@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/layout_order_filter_top"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_order_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/main_color" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="back" >
+
+                <ImageView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile_backoff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="5"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_radius_order_search"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/order_magnifier" />
+
+                <com.zhiduan.crowdclient.view.ClearEditText
+                    android:id="@+id/edt_order_search_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableRight="@drawable/homepage_close"
+                    android:gravity="center_vertical"
+                    android:hint="请输入地址"
+                    android:imeOptions="actionSearch"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/gray_5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="searchData"
+                    android:textColor="@color/text_black"
+                    android:text="搜索" />
+            </LinearLayout>
+
+           
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include layout="@layout/listview_public_dropdown" />
+    </LinearLayout>
+
+</LinearLayout>
